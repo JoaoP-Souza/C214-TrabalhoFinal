@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>My Cinema List</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Cinema List</h1>
+
+    <!-- Button to trigger the modal -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal">Adicionar Filme</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addMovieModal" tabindex="-1" role="dialog" aria-labelledby="addMovieModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addMovieModalLabel">Adicionar Filme</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <!-- Form for adding a movie -->
+            <form class="addFilme">
+              <div class="form-group">
+                <label for="title">Título:</label>
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+
+              <div class="form-group">
+                <label for="genre">Gênero:</label>
+                <input type="text" class="form-control" id="genre" name="genre">
+              </div>
+
+              <div class="form-group">
+                <label for="year">Ano:</label>
+                <input type="text" class="form-control" id="year" name="year">
+              </div>
+
+              <div class="form-group">
+                <label for="rating">Nota:</label>
+                <input type="text" class="form-control" id="rating" name="rating">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" onclick="onAddMovieClick()">Adicionar Filme</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table to display movies -->
+    <table class="table">
+      <!-- Table header -->
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Gênero</th>
+          <th>Ano</th>
+          <th>Nota</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <!-- Table body with movie data -->
+      <tbody>
+        <tr *ngFor="let filme of filmes">
+          <td>{{ filme.nome }}</td>
+          <td>{{ filme.genero }}</td>
+          <td>{{ filme.ano }}</td>
+          <td>{{ filme.nota }}</td>
+          <td><button class="btn btn-danger" (click)="deleteFilme(filme)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Bootstrap and jQuery scripts (make sure to include jQuery before Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
