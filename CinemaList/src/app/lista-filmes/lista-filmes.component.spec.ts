@@ -22,38 +22,23 @@ describe('ListaFilmesComponent', () => {
   });
 
 
-<<<<<<< HEAD
   
   it('should add a movie and verify the return ', () => {
     // chamanado o método e passando os valores por parametro
     const result = component.onAddMovieClick('Filme 1', 'Ação', '2022', '4.5', true);
     // verificando retorno do filme  
-=======
-  it('should add a movie and verify the return ', () => {
-    // chamanado o método e passando os valores por parametro
-    const result = component.onAddMovieClick('Filme 1', 'Ação', '2022', '4.5', true);
-    // verificando retorno do filme
->>>>>>> 94065975a743af9da63cc5bff85195be0ef1c8d8
     expect(result).toBe('Filme adicionado com sucesso!');
   });
 
   it('should add a movie and verify the size of the string', () => {
     // chamanado o método e passando os valores por parametro
     component.onAddMovieClick('Filme 1', 'Ação', '2022', '4.5', true);
-<<<<<<< HEAD
     // verificando retorno do filme  
     expect(component.filmes.length).toBe(1);
 
 
   });
   
-=======
-    // verificando retorno do filme
-    expect(component.filmes.length).toBe(1);
-
-
-  });
->>>>>>> 94065975a743af9da63cc5bff85195be0ef1c8d8
 
   it('should not add a movie with invalid data', () => {
     component.newFilme.nome = '';
@@ -105,8 +90,32 @@ describe('ListaFilmesComponent', () => {
   });
   
   
+  it('deve definir a média como 0 se não houver filmes', () => {
+    
+    component.filmes = [];
+    component.calcularMedia();
+    
+    expect(component.mediaNotas).toBe(0);
+  });
+  
+  it('deve calcular a média corretamente quando há filmes', () => {
+    
+    component.filmes = [
+      { nome: 'Filme 1', genero: 'Ação', ano: '2022', nota: '5' },
+      { nome: 'Filme 2', genero: 'Aventura', ano: '2021', nota: '7' },
+      { nome: 'Filme 3', genero: 'Comédia', ano: '2020', nota: '8' }
+    ];
+      
+    component.calcularMedia();
+    // Calcule a média manualmente
+    const somaNotas = 5 + 7 + 8;
+    const mediaEsperada = somaNotas / component.filmes.length;
+    
+    expect(component.mediaNotas).toBe(mediaEsperada);
+  });
 
 });
+
 
 
 
