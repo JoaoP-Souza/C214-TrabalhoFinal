@@ -29,3 +29,7 @@ jobs:
     - name: Executar testes
       working-directory: CinemaList
       run: ng test --browsers ChromeHeadless
+
+    - name: Encerrar Conexão
+      working-directory: CinemaList
+      run: ^C
