@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-// import { TestBed } from '@angular/core/testing';
-// import { RouterTestingModule } from '@angular/router/testing';
-// import { AppComponent } from './app.component';
-=======
 /*
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
->>>>>>> 94065975a743af9da63cc5bff85195be0ef1c8d8
 
 // describe('AppComponent', () => {
 //   beforeEach(() => TestBed.configureTestingModule({
@@ -36,9 +30,5 @@ import { AppComponent } from './app.component';
 
 
 
-<<<<<<< HEAD
-// });
-=======
 });
 */
->>>>>>> 94065975a743af9da63cc5bff85195be0ef1c8d8

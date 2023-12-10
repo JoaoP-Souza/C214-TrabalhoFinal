@@ -1,4 +1,4 @@
-[![CI Class](https://github.com/JoaoP-Souza/C214-Seminario-Angular/actions/workflows/ci.yml/badge.svg)](https://github.com/JoaoP-Souza/C214-Seminario-Angular/actions/workflows/ci.yml)
+[![CI Class](https://github.com/JoaoP-Souza/C214-TrabalhoFinal/actions/workflows/ci.yml/badge.svg)](https://github.com/JoaoP-Souza/C214-TrabalhoFinal/actions/workflows/ci.yml)
 
 Ao clonar, abra o terminal na pasta MyCinemaList e insira os seguintes comandos
 
