@@ -15,3 +15,5 @@ Após executá-los, abra um prompts de comando e execute,
     npm test, para executar os testes unitários, usando da ferramenta Jasmine
     
     ng serve --open, para iniciar a aplicação web em um ambiente local
+Link do vídeo: 
+https://posinatel-my.sharepoint.com/:v:/g/personal/ana_cecilia_gec_inatel_br/Ed8bbRI5dtdJuNArbWv3Yq4Bir07-WqMxjEn2Ex-VheRfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=qCnA0B
