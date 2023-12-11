@@ -1,34 +1,35 @@
-<div class="container">
+<div class="custom-container">
   <h1>My Cinema List</h1>
 
-  <form class="addFilme" >
+  <form class="addFilme">
     <div class="form-group">
-      <label for="title">Título:</label>
+      <label for="title" style="font-weight: bold; color: black;">Título:</label>
+      <span>&nbsp;</span>
       <input type="text" class="form-control" id="title" name="title">
     </div>
-
+  
     <div class="form-group">
-      <label for="genre">Gênero:</label>
+      <label for="genre" style="font-weight: bold; color: black;">Gênero:</label>
+      <span>&nbsp;</span>
       <input type="text" class="form-control" id="genre" name="genre">
     </div>
-
+    
     <div class="form-group">
-      <label for="year">Ano:</label>
+      <label for="year" style="font-weight: bold; color: black;">Ano:</label>
+      <span>&nbsp;</span>
       <input type="text" class="form-control" id="year" name="year">
     </div>
-
-    <div class="form-group">
-      <label for="rating">Nota:</label>
+    
+    <div class="form-group text-center">
+      <label for="rating" style="font-weight: bold; color: black;">Nota:</label>
+      <span>&nbsp;</span>
       <input type="text" class="form-control" id="rating" name="rating">
     </div>
-
+      
+    
   </form>
 
-  
   <button class="add-movie" (click)="onAddMovieClick()">Adicionar Filme</button>
-
-
-
 
   <table class="table">
     <thead>
@@ -51,4 +52,22 @@
     </tbody>
   </table>
 
-  </div>
+  <!-- Adicionando o elemento para exibir a média -->
+  <p class="show-mean" style="margin-top: 100px;">A média das notas dos filmes é: {{ mediaNotas | number: '1.1-2' }}</p>
+</div>
+
+<style>
+  .custom-container {
+    background-color: #d2cfcf; /* Define a cor de fundo para branco */
+    /* Outros estilos aqui... */
+  }
+</style>
+
+<style>
+  th,
+  td {
+    background-color: #d2cfcf; /* Define um tom de cinza claro */
+  }
+</style>
+
+
