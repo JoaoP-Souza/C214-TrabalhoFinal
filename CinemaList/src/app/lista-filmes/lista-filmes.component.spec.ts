@@ -50,7 +50,7 @@ describe('ListaFilmesComponent', () => {
   
     expect(component.filmes.length).toBe(0);
   
-  expect(result).toBe('Por favor, preencha todos os campos obrigatórios.');
+  expect(result).toBe('A nota deve ser um número entre 0 e 10.');
   });
 
   it('should handle error when accessing input fields', () => {
